@@ -3,36 +3,57 @@ A Super simple and quick Image Classification Tool Written in Python
 -------------------------------------------------------------
 
 This is a graphical tool that lets you quickly flip through datasets of images to categorize them.
+\
 The original script was written by Ryan Mones - https://github.com/rmones/tkteach
 
 
 Getting started
 ----------
+**Install required packaged**
+
 Run python install -r requirements.txt to install required packages.
 
+\
+**Setup class labels**
+
 Write your labels in categories.config file in the config directory.
+
 Format:
-(<key-shortcut>) <label-name>
+(key-shortcut) label-name
+
 
 eg.
+
 (A) Bike
+\
 (B) Car
+\
 (C) Pedestrian
 
+\
+**Setup dataset locations**
 
 Write your dataset locations in datasets.config file in the config directory. The entered locations should contain the images.
+
 Format:
-<dataset-location>
+dataset-location
+
 
 eg.
+
 /home/username/documents/dataset1
+\
 /home/username/documents/dataset2
+\
 /home/username/pictures/dataset3
 
 
+\
+**Run the tool**
+
 Run python run.py to run the tool.
 
-
+\
 Features
 ----------
 
@@ -45,7 +66,7 @@ Features
 - Shows number of unlabeled images
 - Allows navigating between unlabeled images
 
-
+\
 About
 -----------
 
