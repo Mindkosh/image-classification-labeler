@@ -205,6 +205,10 @@ class ClassificationLabeler:
 		self.db.commit()
 
 
+	def createDatasetName(self, datasetPath):
+		datasetName = os.path.basename(os.path.abspath(os.path.join(datasetPath, os.pardir))) + "-" + os.path.basename(datasetPath)
+		return datasetName
+
 	def initializeDatasets(self):
 		print("Initialize Datasets")
 		
@@ -220,7 +224,7 @@ class ClassificationLabeler:
 						dataset_dirs.append(i.strip())
 		
 		self.dataSetsListDir = dataset_dirs
-		self.dataSetsListStr = [os.path.basename(i) for i in dataset_dirs]
+		self.dataSetsListStr = [self.createDatasetName(i) for i in dataset_dirs]
 		
 		if len(self.dataSetsListDir)==0:
 			self.statusBar.config(text="ERROR! No datasets found.")
