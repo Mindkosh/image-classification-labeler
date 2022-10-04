@@ -21,7 +21,7 @@ class ClassificationLabeler:
 		self.master = master
 		self.default_size = (self.master.winfo_screenwidth()-600, self.master.winfo_screenheight()-150)
 
-		master.title("Classification Labeler v1.0")
+		master.title("Classification Labeler v1.1")
 		
 		master.bind("<Key>", self.keyPressed)
 		self.master.option_add("*Font", "aerial 15")
@@ -41,13 +41,13 @@ class ClassificationLabeler:
 		self.frameSeperator00 = tk.Frame(master,width=6,height=1)
 		self.frameSeperator00.pack(side=tk.LEFT)
 		
-		self.frameLEFT = tk.Frame(master,bd=2)
-		self.frameLEFT.pack(side=tk.LEFT, padx=(25,0))
+		self.frameLEFT = tk.Frame(master, bd=2)
+		self.frameLEFT.pack(side=tk.LEFT, padx=(0,0))
 		
 		self.datasetTitleLabel = tk.Label(self.frameLEFT, text="Data Set Selection:")
 		self.datasetTitleLabel.pack()
 		
-		self.dataSetsListbox = tk.Listbox(self.frameLEFT, relief=tk.FLAT, exportselection=False)
+		self.dataSetsListbox = tk.Listbox(self.frameLEFT, relief=tk.FLAT, exportselection=False, height=5)
 		for item in self.dataSetsListStr:
 			self.dataSetsListbox.insert(tk.END, item)
 		self.dataSetsListbox.pack()
@@ -55,8 +55,8 @@ class ClassificationLabeler:
 		self.loadDataSetButton = tk.Button(self.frameLEFT, text="Load Data Set", command=self.loadDataSet)
 		self.loadDataSetButton.pack()
 		
-		self.dataSetStatusLabel = tk.Label(self.frameLEFT, text="No Data Set Loaded!")
-		self.dataSetStatusLabel.pack()
+		# self.dataSetStatusLabel = tk.Label(self.frameLEFT, text="No Data Set Loaded!")
+		# self.dataSetStatusLabel.pack()
 
 		# -------------------
 
@@ -65,7 +65,7 @@ class ClassificationLabeler:
 		
 		# Add this to allow multiple selections
 		# selectmode=tk.MULTIPLE
-		self.categoriesListbox = tk.Listbox(self.frameLEFT, selectbackground='#119911', relief=tk.FLAT, bd=2, exportselection=False)
+		self.categoriesListbox = tk.Listbox(self.frameLEFT, selectbackground='#119911', relief=tk.FLAT, bd=2, exportselection=False, height=8)
 		for item in self.categories:
 			self.categoriesListbox.insert(tk.END, item)
 		self.categoriesListbox.pack()
@@ -455,7 +455,7 @@ class ClassificationLabeler:
 		try:
 			self.dataSetSelection = int(self.dataSetsListbox.curselection()[0])
 		except IndexError:
-			self.dataSetStatusLabel.config(text='No selection!')
+			# self.dataSetStatusLabel.config(text='No selection!')
 			self.dataSetSelection = -1
 		
 		# Check if a valid dataSet is selected
@@ -465,7 +465,7 @@ class ClassificationLabeler:
 			d = self.dataSetsListDir[self.dataSetSelection]
 			self.imageListDir = [os.path.join(d, o) for o in os.listdir(d) if os.path.isdir(os.path.join(d,o))==False]
 			self.imageListStr = [os.path.basename(i) for i in self.imageListDir]
-			self.dataSetStatusLabel.config(text='Dataset: '+str(self.dataSetsListStr[self.dataSetSelection]))
+			# self.dataSetStatusLabel.config(text='Dataset: '+str(self.dataSetsListStr[self.dataSetSelection]))
 			
 			# Create db table entry for this dataSet:
 			self.cursor.execute('INSERT OR IGNORE INTO dataSets(dataSetName, dataSetPath) VALUES(?, ?)', (self.dataSetsListStr[self.dataSetSelection], self.dataSetsListDir[self.dataSetSelection]))
