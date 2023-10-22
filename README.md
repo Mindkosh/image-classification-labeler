@@ -1,11 +1,11 @@
-# image-classification-labeler
-A Super simple and quick Image Classification Tool Written in Python
+# A simple Image classification annotation tool
 -------------------------------------------------------------
 
-This is a graphical tool that lets you quickly flip through datasets of images to categorize them.
+This is a python based graphical tool that lets you quickly flip through datasets of images to categorize them.
 \
 The original script was written by Ryan Mones - https://github.com/rmones/tkteach
 
+Want to try a more sophisticated image annotation platform? [Learn more about the Mindkosh image annotation platform here.](https://mindkosh.com/annotation-platform/image-annotation.html)
 
 Getting started
 ----------
