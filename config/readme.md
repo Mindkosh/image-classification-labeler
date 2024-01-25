@@ -3,7 +3,7 @@
 Write your labels in categories.config file in the config directory.
 
 Format:
-(key-shortcut) label-name
+(keyboard-shortcut) label-name
 
 
 eg.
@@ -17,7 +17,7 @@ eg.
 \
 **Setup dataset locations**
 
-Write your dataset locations in datasets.config file in the config directory. The entered locations should contain the images.
+Create a datasets.config file in the config directory if it does not already exist. Then enter your dataset locations in the file - one dataset location in one line. The entered locations should be the root directory containing the images.
 
 Format:
 dataset-location

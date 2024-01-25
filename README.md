@@ -74,10 +74,10 @@ Using the tool
 1. To zoom into an image, use the scroll wheel. You can also zoom in using the zoom buttons on the left.
 2. To move around the image hold the left mouse button and move the mouse. 
 3. To assign a label to an image, click on the label in the _Categories_ panel on the left.
-   8.1. Or press the shortcut key specified in the categories.config file.
-   8.2. You can assign multiple labels to a file.
-   8.3. Your labels are saved in a sqlite file named _storage.db_ in the root of the repository directory.
-   8.4. To export the labels, click the export button on the left. This will export the labels and the filenames in CSV format.
+   1. Or press the shortcut key specified in the categories.config file.
+   2. You can assign multiple labels to a file.
+   3. Your labels are saved in a sqlite file named _storage.db_ in the root of the repository directory.
+   4. To export the labels, click the export button on the left. This will export the labels and the filenames in CSV format.
     
 
 \
