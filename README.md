@@ -78,7 +78,11 @@ Using the tool
    2. You can assign multiple labels to a file.
    3. Your labels are saved in a sqlite file named _storage.db_ in the root of the repository directory.
    4. To export the labels, click the export button on the left. This will export the labels and the filenames in CSV format.
-    
+
+**Exporting labels**
+1. To export the labels, simply click on the *Export Labels* button at the bottom of the left panel.
+2. Labels are exported into a CSV file saved in the same directory.
+3. Note that the labels for each file are separated by a comma(,), and the columns are seoarated by a semi-colon(;)
 
 \
 Features

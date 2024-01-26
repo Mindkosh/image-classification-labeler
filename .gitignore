@@ -1,3 +1,5 @@
 *.db
 config/*.config
 *.csv
+__pycache__/
+*.pyc
