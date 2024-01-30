@@ -7,7 +7,8 @@ The original script was written by Ryan Mones - https://github.com/rmones/tkteac
 
 Want to try a more sophisticated image annotation platform? [Learn more about the Mindkosh image annotation platform here.](https://mindkosh.com/annotation-platform/image-annotation.html)
 
-![Screenshot from 2024-01-25 13-08-33](https://github.com/Mindkosh/image-classification-labeler/assets/4280242/ea8c5343-f5b9-4dc0-b900-6022d1ed3d8f)
+![Screenshot from 2024-01-26 16-04-55](https://github.com/Mindkosh/image-classification-labeler/assets/4280242/50108a2b-4d55-40d7-b251-b3bb0802d751)
+
 
 
 Getting started
