@@ -1,7 +1,7 @@
 # A simple Image classification annotation tool
 -------------------------------------------------------------
 
-This is a python based graphical tool that lets you quickly flip through datasets of images to categorize them.
+This is a python based graphical tool that lets you quickly browse through datasets of images to categorize them.
 \
 The original script was written by Ryan Mones - https://github.com/rmones/tkteach
 
@@ -14,7 +14,7 @@ Getting started
 ----------
 **Install required packaged**
 
-Run python install -r requirements.txt to install required packages.
+Run ``python install -r requirements.txt`` to install required packages.
 
 \
 **Setup class labels**
@@ -54,7 +54,7 @@ eg.
 \
 **Run the tool**
 
-Run python run.py to run the tool.
+Run ``python run.py`` to run the tool.
 
 \
 \
@@ -82,7 +82,7 @@ Using the tool
 **Exporting labels**
 1. To export the labels, simply click on the *Export Labels* button at the bottom of the left panel.
 2. Labels are exported into a CSV file saved in the same directory.
-3. Note that the labels for each file are separated by a comma(,), and the columns are seoarated by a semi-colon(;)
+3. Note that the labels for each file are separated by a comma( , ), and the columns are seoarated by a semi-colon( ; )
 
 \
 Features
